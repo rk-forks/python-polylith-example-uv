@@ -7,7 +7,7 @@ name = "python-polylith-example-with-uv"
 version = "0.1.0"
 description = "A Python Polylith example code repo"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = "==3.12.*,<3.13"
 license = "MIT"
 authors = [{ name = "David Vujic" }]
 dependencies = [
