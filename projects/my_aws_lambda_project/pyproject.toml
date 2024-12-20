@@ -12,6 +12,13 @@ requires-python = ">=3.8"
 
 dependencies = []
 
+# This section is needed for the Hatchling build backend, to activate the polylith build hook.
+[tool.hatch.build.hooks.polylith-bricks]
+
+# This section is needed for building sdsts
+[tool.hatch.build.targets.wheel]
+packages = ["example"]
+
 [tool.polylith.bricks]
 "../../bases/example/greet_aws_lambda" = "example/greet_aws_lambda"
 "../../components/example/greeting" = "example/greeting"

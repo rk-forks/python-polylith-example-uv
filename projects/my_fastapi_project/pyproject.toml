@@ -15,10 +15,12 @@ dependencies = [
   "uvicorn~=0.25.0",
 ]
 
+# This section is needed for the Hatchling build backend, to activate the polylith build hook.
+[tool.hatch.build.hooks.polylith-bricks]
+
+# This section is needed for building
 [tool.hatch.build.targets.wheel]
 packages = ["example"]
-
-[tool.hatch.build.hooks.polylith-bricks]
 
 [tool.polylith.bricks]
 "../../bases/example/greet_api" = "example/greet_api"
