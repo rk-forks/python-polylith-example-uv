@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling", "hatch-polylith-bricks"]
+build-backend = "hatchling.build"
+
+[project]
+name = "hello"
+version = "0.1.0"
+
+authors = [{ name = "David Vujic" }]
+
+requires-python = "==3.12.*,<3.13"
+
+dependencies = []
+
+[project.scripts]
+hello = "example.hello.core:main"
+
+
+[tool.hatch.build.hooks.polylith-bricks]
+
+[tool.polylith.bricks]
+"../../bases/example/hello" = "example/hello"
